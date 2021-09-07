@@ -1,2 +1,21 @@
 @page "/books"
 
+<Headers Header="MKProject Books"></Headers>
+
+<table class="w3-table-all">
+    <tr>
+        <th>Title</th>
+        <th>Language</th>
+        <th>Difficulty</th>
+        <th>Reading Options</th>
+    </tr>
+    @foreach (Book_List.Book b in Book_List.Books)
+    {
+        <tr>
+            <td>@b.title</td>
+            <td>@b.lang</td>
+            <td>@b.difficlty</td>
+            <td><a class="oi oi-book" href="@b.read">Read Web</a>|<a class="oi oi-cloud-download" href="@b.pdf">PDF</a></td>
+        </tr>
+    }
+</table>

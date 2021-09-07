@@ -1,0 +1,24 @@
+﻿@code {
+
+    public struct Book
+    {
+        public string title;
+        public string read;
+        public string pdf;
+        public string lang;
+        public string difficlty;
+    };
+
+    static Book kotlin = new Book()
+    {
+        title = "Kotlin Basics",
+        read = "http://kotlin_b.mkproj.com/book/",
+        pdf = "https://github.com/MKProj/Kotlin-Basics/raw/main/Tex/kotlin-basics.pdf",
+        lang = "Kotlin",
+        difficlty = "Beginner"
+    };
+
+    public static Book[] Books = new[] {kotlin};
+}
+
+
