@@ -9,16 +9,44 @@
         public string difficlty;
     };
 
-    static Book kotlin = new Book()
+    static Book kt_basics = new Book()
     {
         title = "Kotlin Basics",
         read = "http://kotlin_b.mkproj.com/book/",
-        pdf = "https://github.com/MKProj/Kotlin-Basics/raw/main/Tex/kotlin-basics.pdf",
+        pdf = "https://github.com/MKProj/MKProj-Rev/releases/download/kt_b/Kotlin-Basics_pdf.zip",
         lang = "Kotlin",
         difficlty = "Beginner"
     };
 
-    public static Book[] Books = new[] {kotlin};
+    static Book cpp_basics = new Book()
+    {
+        title = "C++ Basics",
+        read = "http://cpp_b.mkproj.com/book/",
+        pdf = "https://github.com/MKProj/MKProj-Rev/releases/download/c[[_b/CPP-Basics_pdf.zip",
+        lang = "C++",
+        difficlty = "Beginner"
+    };
+    static Book git_basics = new Book()
+    {
+        title = "Git Basics",
+        read = "http://git_b.mkproj.com/book/",
+        pdf = "https://github.com/MKProj/MKProj-Rev/releases/download/git_b/Git-Basics_pdf.zip",
+        lang = "Git(Bash)",
+        difficlty = "Beginner"
+    };
+    
+    public static Book[] Books = new[] {kt_basics, cpp_basics, git_basics};
 }
 
+<!--
+static Book  = new Book()
+{
+title = "",
+read = "",
+pdf = "",
+lang = "",
+difficlty = ""
+};
 
+https://github.com/MKProj/MKProj-Rev/releases/download/tag/name_pdf.zip
+-->
