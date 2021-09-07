@@ -1,9 +1,41 @@
 ﻿@page "/"
-
+@code
+{
+    string[] lang = new[]
+    {
+        "HTML: To build the frontend of the website",
+        "C#: With the .NET Blazor Framework to build dynamic, responsive websites",
+        "LaTEX: The default to build professional, organized documents",
+        "Rust: The preferred language of development for memory-safe, fast applications"
+    };
+}
 <Headers Header="Welcome to MKProjects"></Headers>
 <div class="w3-content w3-padding-16" style="text-align: center">
     <div class="w3-center">
         <h5>The Make Projects Initiative is aimed to be a collection of <strong>Open Source</strong>
-            projects made collaboritavely between programmers as a platform of support. </h5>
+            projects made collaboritavely between programmers as a platform of support. Not only serves
+            as a goal, but a dream where any project may be made available with a little brainstorming...
+        </h5>    
+        <h5>
+            Open Source is the key to this project, and it's ideology identifies that anyone may be able to view 
+            the source code and customize or add however they see fit. In MKProjects, we will implement a merge request 
+            system where the changes are reviewed, and if acceptable will be merged to the master branch. 
+        </h5>
+        <h5>
+            To achieve open source projects, all projects in MKProjects are under the <a href="/Gplv2">GPLv2</a> license and all document 
+            related projects are under the  <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. 
+        </h5>
+    </div>
+</div>
+
+<Headers Header="Languages used in MKProjects"></Headers>
+<div class="w3-content w3-padding-16">
+    <div class="w3-panel w3-leftbar w3-light-grey">
+        <ul>
+            @foreach (string l in lang)
+            {
+                <li><strong>@l</strong></li>
+            }
+        </ul>
     </div>
 </div>
