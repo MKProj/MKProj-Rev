@@ -1,1 +1,28 @@
 @page "/upcoming"
+
+<Headers Header="Upcoming Releases"></Headers>
+
+<table class="w3-table-all">
+    <tr>
+        <th>Name</th>
+        <th>Project</th>
+        <th>Status</th>
+    </tr>
+    @foreach (Upcoming_List.Upcoming u in Upcoming_List.Upcomings)
+    {
+        <tr>
+            <td>@u.name</td>
+            <td>@u.project</td>
+            @if (u.in_progress)
+            {
+                <td style="color: green">In Progress</td>
+            }
+            @if (u.in_progress == false)
+            {
+                <td style="color: red">In Planning</td>
+            }
+
+        </tr>
+    }
+    
+</table>

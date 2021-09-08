@@ -1,0 +1,18 @@
+﻿@code {
+
+    public struct Upcoming
+    {
+        public string name;
+        public string project;
+        public bool in_progress; //If true (in progress), false (in planning)
+    };
+
+    public static Upcoming cs_basics = new Upcoming()
+    {
+        name = "C# Basics",
+        project = "MKProject Books",
+        in_progress = false
+    };
+
+    public static Upcoming[] Upcomings = new[] {cs_basics};
+}
