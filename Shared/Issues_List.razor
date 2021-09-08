@@ -1,0 +1,27 @@
+﻿@code {
+    public struct Issue
+    {
+        public string title;
+        public string date;
+        public int num;
+    };
+
+    static Issue one = new Issue()
+    {
+        title = "Rust in MKProjects",
+        date = "2021-09-08",
+        num = 1,
+    };
+
+    public static string Issue_num(Issue i, int option)
+    {
+        if (option == 0)
+        {
+            return "/issue0" + i.num;
+            
+        }
+        return "0" + i.num;
+    }
+    
+    public static readonly Issue[] Issues = {one};
+}

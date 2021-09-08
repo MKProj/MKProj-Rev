@@ -7,12 +7,33 @@
         public bool in_progress; //If true (in progress), false (in planning)
     };
 
-    public static Upcoming cs_basics = new Upcoming()
+    static Upcoming cs_basics = new Upcoming()
     {
         name = "C# Basics",
-        project = "MKProject Books",
+        project = "Books",
         in_progress = false
     };
 
-    public static Upcoming[] Upcomings = new[] {cs_basics};
+    static Upcoming gist_rust = new Upcoming()
+    {
+        name = "Gist of Rust",
+        project = "Books",
+        in_progress = false
+    };
+
+    static Upcoming c_basics = new Upcoming()
+    {
+        name = "C Basics",
+        project = "Books",
+        in_progress = false
+    };
+
+    static Upcoming moka_issue2 = new Upcoming()
+    {
+        name = "Issue 02 - No Python?",
+        project = "Moka Reads",
+        in_progress = false
+    };
+
+    public static readonly Upcoming[] Upcomings = new[] {cs_basics, gist_rust, c_basics, moka_issue2};
 }
