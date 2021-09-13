@@ -317,7 +317,7 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
-
+.git.bat
 # Cake - Uncomment if you are using it
 # tools/**
 # !tools/packages.config

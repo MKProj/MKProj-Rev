@@ -13,15 +13,22 @@
         num = 1,
     };
 
+    static Issue two = new Issue()
+    {
+        title = "No Python?",
+        date = "2021-09-13",
+        num = 2
+    };
+
     public static string Issue_num(Issue i, int option)
     {
         if (option == 0)
         {
-            return "/issue0" + i.num;
+            return "/Issue0" + i.num;
             
         }
         return "0" + i.num;
     }
     
-    public static readonly Issue[] Issues = {one};
+    public static readonly Issue[] Issues = {one, two};
 }

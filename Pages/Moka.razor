@@ -5,19 +5,19 @@
         <th>Issue</th>
         <th>Published Date</th>
     </tr>
-    <tr>
+    
         @foreach(Issues_List.Issue i in Issues_List.Issues)
         {
+        <tr>    
             @if (i.num < 10)
             {
                 <td><a href="@Issues_List.Issue_num(i, 0)">Issue @Issues_List.Issue_num(i, 1) - @i.title</a></td>
             }
             @if (i.num >= 10)
             {
-               <td><a href="/issue+@i.num">Issue @i.num - @i.title</a></td> 
+               <td><a href="/Issue+@i.num">Issue @i.num - @i.title</a></td> 
             }
-            <td>@i.date</td>
+        <td>@i.date</td>
+        </tr>
         }
-        
-    </tr>
 </table>
