@@ -1,6 +1,54 @@
-﻿@page "/Download"
-<h3>Download</h3>
-
+﻿@page "/download"
+@using System.Runtime.Intrinsics
+<Headers Header="Minerva - Current V1.0.0"></Headers>
 @code {
+
+   public struct Links
+    {
+        public string version;
+        public string win_exe;
+        public string win_zip;
+        public string linux_deb;
+        public string linux_zip;
+    };
+
+    static Links v1_0_0 = new Links()
+    {
+        version = "V1.0.0",
+        win_exe = "https://github.com/MKProj/Minerva/releases/download/v1.0.0-win/Minerva-1.0.0.Setup.exe",
+        win_zip = "https://github.com/MKProj/Minerva/releases/download/v1.0.0-win/Minerva-win32-x64.zip",
+        linux_deb = "https://github.com/MKProj/Minerva/releases/download/v1.0.0-deb/minerva_1.0.0_amd64.deb",
+        linux_zip = "https://github.com/MKProj/Minerva/releases/download/v1.0.0-deb/minerva_1.0.0_amd64.zip"
+    };
     
+    public static Links[] links = new Links[]
+    {
+        v1_0_0
+    };
 }
+<Prompts Title="Note: Currently MacOS isn't currently supported, but we hope to in the future!"></Prompts>
+<table class="w3-table-all">
+    
+   
+        @foreach (Links l in links)
+        { 
+            <tr>
+                <td>Windows x64.exe - @l.version</td>
+                <td><a href="@l.win_exe">Download <span class="oi oi-data-transfer-download"></span></a></td>
+            </tr>
+            <tr>
+                <td>Windows x64.zip - @l.version</td>
+                <td><a href="@l.win_zip">Download <span class="oi oi-data-transfer-download"></span></a></td>
+            </tr>
+            <tr>
+                <td>Debian x64.deb - @l.version</td>
+                <td><a href="@l.linux_deb">Download <span class="oi oi-data-transfer-download"></span></a></td>
+            </tr>
+            <tr>
+                <td>Linux x64.zip - @l.version</td>
+                <td><a href="@l.linux_zip">Download <span class="oi oi-data-transfer-download"></span></a></td>
+            </tr>
+        }
+
+    
+</table>
