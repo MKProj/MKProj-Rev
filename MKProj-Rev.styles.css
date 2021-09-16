@@ -10,7 +10,9 @@
 }
 
 .sidebar[b-f7zuuqdmw7] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+   /* background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%); */
+   background-color: #e84393;
+   background-image: linear-gradient(45deg, #e84393 0%, #000000 74%);
 }
 
 .top-row[b-f7zuuqdmw7] {
@@ -71,12 +73,13 @@
 }
 /* /Shared/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-j8v79ef0de] {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);    
 }
+
 
 .top-row[b-j8v79ef0de] {
     height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    background-color: #000;
 }
 
 .navbar-brand[b-j8v79ef0de] {
